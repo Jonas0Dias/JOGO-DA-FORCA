@@ -49,7 +49,7 @@
     margin-top: 70px;
 }
 
-.letra {
+.letrainicial {
     width: 80px;
     height: 80px;
     margin-right: 12px;
@@ -64,6 +64,15 @@
     align-items: center;
     text-align: center;
     background-color: #798A9F;
+    transition: linear 0.3s;
+}
+
+.letrainicial:hover{
+    scale: 0.85;
+}
+
+.letrainiciada{
+    background-color: #39739D;
 }
 
 .chute {

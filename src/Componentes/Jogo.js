@@ -1,16 +1,24 @@
-
-import palavras from "../palavras"
-export default function Jogo() {
-    let erros = 0
+import Letras from "./Letras"
+import palavras from "./palavras"
+import React from 'react'
+export default function Jogo(props) {
+    const [erros, setErros] = React.useState(0)
+    const [displayTracos, setDisplayTracos] = React.useState('none')
     let palavraescolhida;
     const randomElement = palavras[Math.floor(Math.random() * palavras.length)];
-    console.log(randomElement)
     palavraescolhida = randomElement.split('')
+    console.log(palavraescolhida)
+    console.log(props)
+    // console.log(setLetraInicial)
     return (
+
         <div className="jogo">
             <img className="imagem" src={`assets/forca${erros}.png`} />
-            <button onClick={() => '' } >Escolher Palavra</button>
-            <div className="traços">
+            <button onClick={() => {
+                setDisplayTracos('block')
+                props.setLetraInicial('letrainicial letrainiciada')
+            }} >Escolher Palavra</button>
+            <div className="traços" style={{ display: displayTracos }}>
                 {palavraescolhida.map(p => <>__ </>)}
             </div>
         </div>
