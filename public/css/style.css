@@ -1,0 +1,108 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.imagem {
+    margin-top: 59px;
+    margin-left: 38px;
+}
+
+.jogo button {
+    position: fixed;
+    top: 89px;
+    right: 53px;
+    width-max: 200px;
+    height: 60px;
+    background: #27AE60;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.traços {
+    position: absolute;
+    height: 68px;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    Top: 630px;
+    right: 53px;
+    color: #000000;
+}
+
+.letras {
+    display: flex;
+    width: 65%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.letra {
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+    margin-bottom: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #798A9F;
+}
+
+.chute {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.chute p {
+    width: 144px;
+    height: 23px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.chute input {
+    box-sizing: border-box;
+    width: 50%;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+.chute button {
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+}

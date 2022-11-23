@@ -1,6 +1,15 @@
+import Chute from './Componentes/Chute.js';
+import Jogo from './Componentes/Jogo.js'
+import Letras from './Componentes/Letras.js';
+
+
 function App() {
   return (
-    <div>Instagram</div>
+    <>
+    <Jogo/>
+    <Letras/>
+    <Chute/>
+    </>
   );
 }
 
