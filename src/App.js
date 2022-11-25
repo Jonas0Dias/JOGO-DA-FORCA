@@ -13,10 +13,11 @@ function App() {
   const [displayTracos, setDisplayTracos] = React.useState('none')
   const [displayletraforca, setDisplayLetraForca] = React.useState('none')
   const [letraclicada, setLetraClicada] = React.useState([])
+  const [habilitado,setHabilitado] = React.useState(true)
   return (
     <>
-      <Jogo letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} />
-      <Letras letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} />
+      <Jogo letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} />
+      <Letras letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} />
       <Chute />
     </>
   );

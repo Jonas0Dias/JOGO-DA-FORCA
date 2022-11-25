@@ -6,14 +6,25 @@ export default function Letras(props) {
         <div className="letras">
             {
                 alfabeto.map(l => 
-                    <button 
+                    <button
+                    // disabled ={`${props.habilitado}`}
                     key={l.toUpperCase()} 
                     className={`letra${props.letraclicada.length==0 || props.letraclicada.includes(l) ? 'inicial' : 'iniciada'}`} 
                     onClick={() => {
-                        if (!props.letraclicada.includes(l)){
+                        const novoletraclicada=[...props.letraclicada,l]
+                        if (!props.letraclicada.includes(l)){               
                             props.setLetraClicada([...props.letraclicada,l])
-                            console.log(props.letraclicada)
+                            console.log(novoletraclicada)
+                            alert('ta entrando aqui')
                         }
+                        if(props.palavraescolhida.includes(l)){
+                            alert('tem essa letra')
+                        }
+
+                        if(!props.palavraescolhida.includes(l)){
+                            props.setErros(props.erros+1)
+                        }
+
                                     }
                             }
                    
