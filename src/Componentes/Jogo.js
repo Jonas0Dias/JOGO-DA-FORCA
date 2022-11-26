@@ -9,19 +9,21 @@ export default function Jogo(props) {
             <img className="imagem" src={`assets/forca${props.erros}.png`} />
             <button onClick={() => {
                 props.setHabilitado(false)
-                props.setLetraClicada('~')
+                props.setLetraClicada('.')
                 props.setDisplayTracos('flex')
                 props.setLetraInicial('letrainicial letrainiciada')
                                     }
                             } 
-            >Escolher Palavra</button>
+            >Sortear palavra da forca</button>
             <div className="traços" style={{ display: props.displayTracos }}>
                 {props.palavraescolhida.map(p => 
                    
                     <>
                         <div className="letraforca" >
-                            <h1 style={props.letraclicada.includes(p) ? {display:'block'} : {display:'none'}}>{p}</h1>
-                            <h2 >{'__'}</h2>
+                            <h1 style={props.letraclicada.includes(p) ||props.erros===6 ? {display:props.displayletraforca} : {display:'none'}} className={props.cor} 
+                                
+                            >{p}</h1>
+                            <h2 style={props.letraclicada.includes(p) ||props.erros===6 ? {display:'none'} : {display:'block'}}>{'__'}</h2>
                         </div>
                     </>)
                 }      

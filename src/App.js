@@ -11,13 +11,16 @@ function App() {
   const [letrainicial, setLetraInicial] = React.useState('letrainicial')
   const [erros, setErros] = React.useState(0)
   const [displayTracos, setDisplayTracos] = React.useState('none')
-  const [displayletraforca, setDisplayLetraForca] = React.useState('none')
+  const [displayletraforca, setDisplayLetraForca] = React.useState('block')
   const [letraclicada, setLetraClicada] = React.useState([])
   const [habilitado,setHabilitado] = React.useState(true)
+  const [letrascertas, setLetrasCertas] = React.useState([])
+  const [cor, setCor] = React.useState('black')
   return (
     <>
-      <Jogo letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} />
-      <Letras letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} />
+      <Jogo letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} />
+      <Letras letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} 
+      letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor}/>
       <Chute />
     </>
   );
