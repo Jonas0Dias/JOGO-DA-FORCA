@@ -11,22 +11,29 @@ export default function Chute(props) {
                     props.setChute(event.target.value)
                 }
                 } data-teste="guess-input"></input>
-            <button 
-            disabled={props.habilitado}
-            onClick={() => {
-                if (props.chute === props.palavraescolhida.join('')) {
-                    props.setChuteCerto(true)
-                    props.setHabilitado(true)
-                    props.setCor('verde')
+            <button
+                disabled={props.habilitado}
+                onClick={() => {
+                    props.setButtonReiniciar('block')
                     props.setDisplayLetraForca('block')
-                }
-                else {
-                    props.setErros(6)
-                    props.setHabilitado(true)
-                    props.setCor('vermelho')
-                    props.setDisplayLetraForca('block')
-                }
-            }} data-teste="guess-button">Chutar!</button>
+                    props.setHabilitarIniciarJogo(true)
+                    if (props.chute === props.palavraescolhida.join('')) {
+
+                        props.setChuteCerto(true)
+                        props.setHabilitado(true)
+                        props.setCor('verde')
+
+
+                    }
+                    else {
+
+                        props.setErros(6)
+                        props.setHabilitado(true)
+                        props.setCor('vermelho')
+
+
+                    }
+                }} data-teste="guess-button">Chutar!</button>
         </div>
     )
 }

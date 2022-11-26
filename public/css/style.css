@@ -21,7 +21,7 @@
 .none{
     display:'none'
 }
-.jogo button {
+.botao1{
     position: absolute;
     top: 89px;
     right: 53px;
@@ -36,6 +36,24 @@
     color: #FFFFFF;
     transition: linear 0.3s;
 }
+
+.botao2{
+    position: absolute;
+    top: 50%;
+    height: 60px;
+    right: 50%;
+    background: red;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    transition: linear 0.3s;
+}
+
+
 
 .letraforca {
     position: relative;

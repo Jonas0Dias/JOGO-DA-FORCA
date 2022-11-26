@@ -18,18 +18,13 @@ function App() {
   const [cor, setCor] = React.useState('black')
   const [chute, setChute] = React.useState('')
   const [chutecerto, setChuteCerto] = React.useState(false)
+  const[buttonreiniciar, setButtonReiniciar] = React.useState('none')
+  const [habilitariniciarjogo, setHabilitarIniciarJogo] = React.useState(false)
   return (
     <>
-      <Jogo letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chute={chute} setChute={setChute} chutecerto={chutecerto} setChuteCerto={setChuteCerto} />
-      <div className='reiniciarjogo' style={{display:'none'}}>
-        <div>Deseja Jogar novamente?</div>
-        <div>
-          <button>SIM</button>
-          <button>NÃO</button>
-        </div>
-      </div>
-      <Letras letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chute={chute} setChute={setChute} chutecerto={chutecerto} setChuteCerto={setChuteCerto} />
-      <Chute chute={chute} setChute={setChute} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chutecerto={chutecerto} setChuteCerto={setChuteCerto} />
+      <Jogo letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chute={chute} setChute={setChute} chutecerto={chutecerto} setChuteCerto={setChuteCerto} buttonreiniciar={buttonreiniciar} setButtonReiniciar={setButtonReiniciar} habilitariniciarjogo={habilitariniciarjogo} setHabilitarIniciarJogo={setHabilitarIniciarJogo}/>
+      <Letras letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chute={chute} setChute={setChute} chutecerto={chutecerto} setChuteCerto={setChuteCerto} buttonreiniciar={buttonreiniciar} setButtonReiniciar={setButtonReiniciar} habilitariniciarjogo={habilitariniciarjogo} setHabilitarIniciarJogo={setHabilitarIniciarJogo} />
+      <Chute chute={chute} setChute={setChute} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chutecerto={chutecerto} setChuteCerto={setChuteCerto} buttonreiniciar={buttonreiniciar} setButtonReiniciar={setButtonReiniciar} habilitariniciarjogo={habilitariniciarjogo} setHabilitarIniciarJogo={setHabilitarIniciarJogo}/>
     </>
   );
 }

@@ -32,9 +32,10 @@ export default function Letras(props) {
                                   
                         }
                         if (j===props.palavraescolhida.length){
-                        
+                            props.setButtonReiniciar('block')
                             props.setHabilitado(true)
                             props.setCor('verde')
+                            props.setHabilitarIniciarJogo(true)
 
                         }
 
@@ -43,10 +44,11 @@ export default function Letras(props) {
                             const novoerros=props.erros+1
                             props.setErros(novoerros)
                             if(novoerros===6){
-                                
+                                props.setButtonReiniciar('block')
                                 props.setHabilitado(true)
                                 props.setCor('vermelho')
                                 props.setDisplayLetraForca('block')
+                                props.setHabilitarIniciarJogo(true)
                                 
                             }
     
