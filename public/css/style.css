@@ -22,10 +22,9 @@
     display:'none'
 }
 .jogo button {
-    position: fixed;
+    position: absolute;
     top: 89px;
     right: 53px;
-    width-max: 200px;
     height: 60px;
     background: #27AE60;
     border-radius: 8px;
@@ -35,6 +34,7 @@
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+    transition: linear 0.3s;
 }
 
 .letraforca {
@@ -103,7 +103,7 @@
     border-radius: 20px;
 }
 
-.letrainicial:hover, .letrainiciada:hover {
+.letrainicial:hover, .letrainiciada:hover, .jogo button:hover {
     scale: 0.85;
     background-color:#798A9F ;
 }
@@ -168,4 +168,36 @@
     background: #E1ECF4;
     border: 1px solid #7AA7C7;
     border-radius: 3px;
+}
+
+.reiniciarjogo{
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    /* background-color: #798A9F; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.reiniciarjogo div{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 23px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reiniciarjogo button{
+    width: 100px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
 }

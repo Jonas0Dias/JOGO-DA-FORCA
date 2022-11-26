@@ -8,6 +8,7 @@ export default function Letras(props) {
             {
                 alfabeto.map(l => 
                     <button
+                    data-teste="letter"
                     disabled={props.habilitado}
                     key={l.toUpperCase()} 
                     className={`letra${props.letraclicada.length==0 || props.letraclicada.includes(l) ? 'inicial' : 'iniciada'}`} 
@@ -21,7 +22,7 @@ export default function Letras(props) {
                         if(props.palavraescolhida.includes(l)){ 
                             const novoletrascertas=[...props.letrascertas,l]
                             props.setLetrasCertas(novoletrascertas)
-                            console.log(novoletrascertas)
+                            
                             for (let i=0; i<props.palavraescolhida.length;i++){
                                 if (novoletrascertas.includes(props.palavraescolhida[i])){
                                     j=j+1
@@ -31,7 +32,7 @@ export default function Letras(props) {
                                   
                         }
                         if (j===props.palavraescolhida.length){
-                            alert('vc venceu')
+                        
                             props.setHabilitado(true)
                             props.setCor('verde')
 
@@ -42,11 +43,11 @@ export default function Letras(props) {
                             const novoerros=props.erros+1
                             props.setErros(novoerros)
                             if(novoerros===6){
-                                alert('cabo o jogo, tu perdeu')
+                                
                                 props.setHabilitado(true)
                                 props.setCor('vermelho')
                                 props.setDisplayLetraForca('block')
-                                console.log(props.displayletraforca)
+                                
                             }
     
                         }

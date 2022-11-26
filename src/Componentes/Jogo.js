@@ -2,28 +2,27 @@ import Letras from "./Letras"
 import palavras from "./palavras"
 import React from 'react'
 export default function Jogo(props) {
-    
     return (
 
         <div className="jogo">
-            <img className="imagem" src={`assets/forca${props.erros}.png`} />
-            <button onClick={() => {
+            <img data-test="game-image" className="imagem" src={`assets/forca${props.erros}.png`} />
+            <button data-test="choose-word" onClick={() => {
                 props.setHabilitado(false)
                 props.setLetraClicada('.')
                 props.setDisplayTracos('flex')
                 props.setLetraInicial('letrainicial letrainiciada')
                                     }
                             } 
-            >Sortear palavra da forca</button>
-            <div className="traços" style={{ display: props.displayTracos }}>
+            >INICIAR JOGO</button>
+            <div data-test='word' data-answer = {props.palavraescolhida.join('')} className="traços" style={{ display: props.displayTracos }}>
                 {props.palavraescolhida.map(p => 
                    
                     <>
                         <div className="letraforca" >
-                            <h1 style={props.letraclicada.includes(p) ||props.erros===6 ? {display:props.displayletraforca} : {display:'none'}} className={props.cor} 
+                            <h1 style={props.letraclicada.includes(p) ||props.erros===6 || props.chutecerto ? {display:props.displayletraforca} : {display:'none'}} className={props.cor} 
                                 
                             >{p}</h1>
-                            <h2 style={props.letraclicada.includes(p) ||props.erros===6 ? {display:'none'} : {display:'block'}}>{'__'}</h2>
+                            <h2 style={props.letraclicada.includes(p) ||props.erros===6 ||props.chutecerto ? {display:'none'} : {display:'block'}}>{'__'}</h2>
                         </div>
                     </>)
                 }      
