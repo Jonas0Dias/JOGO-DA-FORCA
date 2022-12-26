@@ -1,7 +1,7 @@
 
 ## :memo: Descrição
 Jogo da Forca é uma reprodução da brincadeira clássica na versão digital. Apenas para diversão!
-
+![GIF 26-12-2022 19-01-44](https://user-images.githubusercontent.com/115515669/209585645-7a09a3af-9a15-4ea1-bb38-42309c0921e6.gif)
 ## :wrench: Tecnologias utilizadas
 Este projeto foi desenvolvido inteiramente em REACT.JS. Algumas das ferramentas e conceitos utilizados foram:
 
