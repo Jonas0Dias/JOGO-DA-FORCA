@@ -1,7 +1,10 @@
 import Letras from "./Letras"
 import palavras from "./palavras"
 import React from 'react'
+import styled from 'styled-components';
+
 export default function Jogo(props) {
+    const[a,setA] = React.useState(false)
     return (
 
         <div className="jogo">
@@ -20,14 +23,18 @@ export default function Jogo(props) {
                     </>)
                 }      
             </div>
-            <div className="divbotao"><button disabled={props.habilitariniciarjogo} className="botao1" data-test="choose-word" onClick={() => {
+            <div className="divbotao"><Botão a={a} disabled={props.habilitariniciarjogo}  className="botao1" data-test="choose-word" onClick={() => {
+                setA(true)
                 props.setHabilitado(false)
                 props.setLetraClicada('.')
                 props.setDisplayTracos('flex')
                 props.setLetraInicial('letrainicial letrainiciada')
+                if (props.erros===6){
+                    setA(false)
+                }
                                     }
                             } 
-            >INICIAR JOGO</button>
+            >{!a ? 'INICIAR JOGO' : 'REINICIAR JOGO'}</Botão>
             <button
             onClick={()=> window.location.reload(true)} 
             className="botao2" style={{display:props.buttonreiniciar}}>REINICIAR JOGO</button>
@@ -36,7 +43,9 @@ export default function Jogo(props) {
     )
 }
 
-
+const Botão=styled.button`
+display:${props => props.a ? 'none': 'flex'}
+`
 
 
 
