@@ -4,6 +4,7 @@ export default function Chute(props) {
         <div className="chute">
             <p>Já sei a palavra!</p>
             <input
+            placeholder="Digite o seu palpite..."
                 disabled={props.habilitado}
                 value={props.chute}
                 onChange={(event) => {

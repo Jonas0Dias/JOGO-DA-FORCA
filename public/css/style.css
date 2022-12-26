@@ -159,8 +159,9 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
-    margin-top: 18px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 110px;
+
 }
 .chute p {
     height: 23px;
@@ -175,13 +176,16 @@
 }
 
 .chute input {
+    font-family: 'Lucida Sans';
     box-sizing: border-box;
     width: 50%;
     height: 40px;
     background: #FFFFFF;
     border: 1px solid #CCCCCC;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    border-radius: 8px;
+    background: #b6bfc9;
+    box-shadow: inset 7px 7px 13px #878d95,
+                inset -7px -7px 13px #e5f1fd;
     
 }
 
@@ -193,6 +197,10 @@
     border: 1px solid #7AA7C7;
     border-radius: 3px;
     font-size: 20px;
+    border-radius: 8px;
+background: #93bcec;
+box-shadow: inset 7px 7px 13px #6d8baf,
+            inset -7px -7px 13px #b9edff;
 }
 
 .reiniciarjogo{
