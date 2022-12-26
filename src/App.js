@@ -3,6 +3,8 @@ import Jogo from './Componentes/Jogo.js'
 import Letras from './Componentes/Letras.js';
 import React from 'react'
 import palavras from "./Componentes/palavras.js"
+import Header from './Componentes/Header.js';
+import Footer from './Componentes/Footer.js';
 let palavraescolhida;
 const randomElement = palavras[Math.floor(Math.random() * palavras.length)];
 palavraescolhida = randomElement.split('')
@@ -22,9 +24,11 @@ function App() {
   const [habilitariniciarjogo, setHabilitarIniciarJogo] = React.useState(false)
   return (
     <>
+    <Header></Header>
       <Jogo letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chute={chute} setChute={setChute} chutecerto={chutecerto} setChuteCerto={setChuteCerto} buttonreiniciar={buttonreiniciar} setButtonReiniciar={setButtonReiniciar} habilitariniciarjogo={habilitariniciarjogo} setHabilitarIniciarJogo={setHabilitarIniciarJogo}/>
       <Letras letra={letrainicial} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chute={chute} setChute={setChute} chutecerto={chutecerto} setChuteCerto={setChuteCerto} buttonreiniciar={buttonreiniciar} setButtonReiniciar={setButtonReiniciar} habilitariniciarjogo={habilitariniciarjogo} setHabilitarIniciarJogo={setHabilitarIniciarJogo} />
       <Chute chute={chute} setChute={setChute} setLetraInicial={setLetraInicial} palavraescolhida={palavraescolhida} erros={erros} setErros={setErros} displayTracos={displayTracos} setDisplayTracos={setDisplayTracos} displayletraforca={displayletraforca} setDisplayLetraForca={setDisplayLetraForca} letraclicada={letraclicada} setLetraClicada={setLetraClicada} habilitado={habilitado} setHabilitado={setHabilitado} letrascertas={letrascertas} setLetrasCertas={setLetrasCertas} cor={cor} setCor={setCor} chutecerto={chutecerto} setChuteCerto={setChuteCerto} buttonreiniciar={buttonreiniciar} setButtonReiniciar={setButtonReiniciar} habilitariniciarjogo={habilitariniciarjogo} setHabilitarIniciarJogo={setHabilitarIniciarJogo}/>
+      <Footer erros={erros}></Footer>
     </>
   );
 }

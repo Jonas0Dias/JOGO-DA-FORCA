@@ -5,6 +5,7 @@
 .imagem {
     margin-top: 59px;
     margin-left: 38px;
+
 }
 
 .vermelho{
@@ -53,7 +54,12 @@
     transition: linear 0.3s;
 }
 
-
+.header{
+    display:none;
+}
+.footer{
+    display: none;
+}
 
 .letraforca {
     position: relative;
@@ -156,12 +162,10 @@
 }
 
 .chute p {
-    width: 144px;
     height: 23px;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 23px;
     display: flex;
     align-items: center;
@@ -177,6 +181,7 @@
     border: 1px solid #CCCCCC;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
+    
 }
 
 .chute button {
@@ -186,6 +191,7 @@
     background: #E1ECF4;
     border: 1px solid #7AA7C7;
     border-radius: 3px;
+    font-size: 20px;
 }
 
 .reiniciarjogo{
@@ -208,7 +214,9 @@
     text-align: center;
     margin-bottom: 20px;
 }
-
+.jogo{
+    position: relative;
+}
 .reiniciarjogo button{
     width: 100px;
     height: 50px;
@@ -218,4 +226,71 @@
     align-items: center;
     text-align: center;
     margin-right: 20px;
+}
+
+@media (max-width: 950px){
+    .imagem{
+        width:50%;
+        margin-top: 80px;
+    }
+
+    .botao1{
+        top: 135%;
+        right: 30%;
+        height: 30px;
+    }
+
+    .botao2{
+        top: 135%;
+        right: 25%;
+        height: 30px;
+    }
+.letras{
+    margin-top: 160px;
+}
+.letrainicial, .letrainiciada{
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+}
+
+.chute p{
+    display: none;
+}
+
+.traços{
+    font-size: 20px;
+    width: 100%;
+    top: 300px;
+    right: 0%;
+}
+
+
+.letraforca{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 35px;
+}
+
+.header, .footer{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    height: 50px;
+    background: #7ab0e1;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 31px;
+    border-radius: 0px;
+    background: #78a9dd;
+    box-shadow: inset 10px 10px 20px #486585, inset -10px -10px 20px #a8edff;
+
+}
+
+.footer{
+    bottom: 0;
+}
 }
