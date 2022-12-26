@@ -2,49 +2,52 @@ import Letras from "./Letras"
 import palavras from "./palavras"
 import React from 'react'
 import styled from 'styled-components';
-
+import { Animated } from "react-animated-css";
 export default function Jogo(props) {
-    const[a,setA] = React.useState(false)
+    const [a, setA] = React.useState(false)
     return (
 
         <div className="jogo">
-            <img data-test="game-image" className="imagem" src={`assets/forca${props.erros}.png`} />
-           
-            <div data-test='word' data-answer = {props.palavraescolhida.join('')} className="traços" style={{ display: props.displayTracos }}>
-                {props.palavraescolhida.map(p => 
-                   
+            <Animated animationIn="fadeInLeft" animationOut="fadeOut" animationInDuration={800} animationOutDuration={800} isVisible={true}>
+                <img data-test="game-image" className="imagem" src={`assets/forca${props.erros}.png`} />
+            </Animated>
+
+
+            <div data-test='word' data-answer={props.palavraescolhida.join('')} className="traços" style={{ display: props.displayTracos }}>
+                {props.palavraescolhida.map(p =>
+
                     <>
                         <div className="letraforca" >
-                            <h1 style={props.letraclicada.includes(p) ||props.erros===6 || props.chutecerto ? {display:props.displayletraforca} : {display:'none'}} className={props.cor} 
-                                
+                            <h1 style={props.letraclicada.includes(p) || props.erros === 6 || props.chutecerto ? { display: props.displayletraforca } : { display: 'none' }} className={props.cor}
+
                             >{p}</h1>
-                            <h2 style={props.letraclicada.includes(p) ||props.erros===6 ||props.chutecerto ? {display:'none'} : {display:'block'}}>{'__'}</h2>
+                            <h2 style={props.letraclicada.includes(p) || props.erros === 6 || props.chutecerto ? { display: 'none' } : { display: 'block' }}>{'__'}</h2>
                         </div>
                     </>)
-                }      
+                }
             </div>
-            <div className="divbotao"><Botão a={a} disabled={props.habilitariniciarjogo}  className="botao1" data-test="choose-word" onClick={() => {
+            <div className="divbotao"><Botão a={a} disabled={props.habilitariniciarjogo} className="botao1" data-test="choose-word" onClick={() => {
                 setA(true)
                 props.setHabilitado(false)
                 props.setLetraClicada('.')
                 props.setDisplayTracos('flex')
                 props.setLetraInicial('letrainicial letrainiciada')
-                if (props.erros===6){
+                if (props.erros === 6) {
                     setA(false)
                 }
-                                    }
-                            } 
+            }
+            }
             >{!a ? 'INICIAR JOGO' : 'REINICIAR JOGO'}</Botão>
-            <button
-            onClick={()=> window.location.reload(true)} 
-            className="botao2" style={{display:props.buttonreiniciar}}>REINICIAR JOGO</button>
+                <button
+                    onClick={() => window.location.reload(true)}
+                    className="botao2" style={{ display: props.buttonreiniciar }}>REINICIAR JOGO</button>
             </div>
         </div>
     )
 }
 
-const Botão=styled.button`
-display:${props => props.a ? 'none': 'flex'}
+const Botão = styled.button`
+display:${props => props.a ? 'none' : 'flex'}
 `
 
 
