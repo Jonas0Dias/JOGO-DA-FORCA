@@ -18,7 +18,7 @@ export default function Chute(props) {
                     props.setButtonReiniciar('block')
                     props.setDisplayLetraForca('block')
                     props.setHabilitarIniciarJogo(true)
-                    if (props.chute === props.palavraescolhida.join('')) {
+                    if (props.chute.toLowerCase() === props.palavraescolhida.join('')) {
 
                         props.setChuteCerto(true)
                         props.setHabilitado(true)
