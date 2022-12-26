@@ -56,6 +56,7 @@
 
 .header{
     display:none;
+    z-index: 1;
 }
 .footer{
     display: none;
@@ -153,13 +154,6 @@
     transition: linear 0.3s;
 }
 
-.chute {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    margin: auto;
-    margin-top: 50px;
-}
 
 .chute p {
     height: 23px;
@@ -216,6 +210,7 @@
 }
 .jogo{
     position: relative;
+    padding-top: 50px;
 }
 .reiniciarjogo button{
     width: 100px;
@@ -235,18 +230,20 @@
     }
 
     .botao1{
-        top: 135%;
+        top: 126%;
         right: 30%;
         height: 30px;
+        position: initial;
     }
 
     .botao2{
         top: 135%;
         right: 25%;
         height: 30px;
+        position: initial;
     }
 .letras{
-    margin-top: 160px;
+    margin-top: 60px;
 }
 .letrainicial, .letrainiciada{
     width: 30px;
@@ -261,11 +258,29 @@
 .traços{
     font-size: 20px;
     width: 100%;
-    top: 300px;
+    top: 359px;
     right: 0%;
+    position: initial;
+}
+.chute{
+    margin-bottom: 90px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+    height: 100px;
 }
 
+.chute input{
+    width:80%;
+}
 
+.divbotao{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
 .letraforca{
     position: relative;
     display: flex;

@@ -6,17 +6,7 @@ export default function Jogo(props) {
 
         <div className="jogo">
             <img data-test="game-image" className="imagem" src={`assets/forca${props.erros}.png`} />
-            <button disabled={props.habilitariniciarjogo} className="botao1" data-test="choose-word" onClick={() => {
-                props.setHabilitado(false)
-                props.setLetraClicada('.')
-                props.setDisplayTracos('flex')
-                props.setLetraInicial('letrainicial letrainiciada')
-                                    }
-                            } 
-            >INICIAR JOGO</button>
-            <button
-            onClick={()=> window.location.reload(true)} 
-            className="botao2" style={{display:props.buttonreiniciar}}>REINICIAR JOGO</button>
+           
             <div data-test='word' data-answer = {props.palavraescolhida.join('')} className="traços" style={{ display: props.displayTracos }}>
                 {props.palavraescolhida.map(p => 
                    
@@ -29,6 +19,18 @@ export default function Jogo(props) {
                         </div>
                     </>)
                 }      
+            </div>
+            <div className="divbotao"><button disabled={props.habilitariniciarjogo} className="botao1" data-test="choose-word" onClick={() => {
+                props.setHabilitado(false)
+                props.setLetraClicada('.')
+                props.setDisplayTracos('flex')
+                props.setLetraInicial('letrainicial letrainiciada')
+                                    }
+                            } 
+            >INICIAR JOGO</button>
+            <button
+            onClick={()=> window.location.reload(true)} 
+            className="botao2" style={{display:props.buttonreiniciar}}>REINICIAR JOGO</button>
             </div>
         </div>
     )
