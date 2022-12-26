@@ -14,7 +14,7 @@ Este projeto foi desenvolvido inteiramente em REACT.JS. Algumas das ferramentas 
 
 
 ## :rocket: Rodando o projeto
-Para rodar o repositório basta clicar neste <a href="projeto-08-jogo-da-forca.vercel.app"> LINK </a> onde se encontra o deploy.
+Para rodar o repositório basta clicar neste <a href="https://projeto-08-jogo-da-forca.vercel.app/"> LINK </a> onde se encontra o deploy.
 
 
 ## :handshake: Colaboradores
