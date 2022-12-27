@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Animated } from "react-animated-css";
 export default function Jogo(props) {
     const [a, setA] = React.useState(false)
+    const [b, setb] = React.useState(false)
     return (
 
         <div className="jogo">
@@ -12,35 +13,52 @@ export default function Jogo(props) {
                 <img data-test="game-image" className="imagem" src={`assets/forca${props.erros}.png`} />
             </Animated>
 
+            <Animated animationIn="fadeInLeft" animationOut="fadeOut" animationInDuration={800} animationOutDuration={800} isVisible={true}>
+                <div data-test='word' data-answer={props.palavraescolhida.join('')} className="traços" style={{ display: props.displayTracos }}>
+                    {props.palavraescolhida.map(p =>
 
-            <div data-test='word' data-answer={props.palavraescolhida.join('')} className="traços" style={{ display: props.displayTracos }}>
-                {props.palavraescolhida.map(p =>
+                        <>
+                            <div className="letraforca" >
+                                
+                                    <h1 style={props.letraclicada.includes(p) || props.erros === 6 || props.chutecerto ? { display: props.displayletraforca } : { display: 'none' }} className={props.cor}
 
-                    <>
-                        <div className="letraforca" >
-                            <h1 style={props.letraclicada.includes(p) || props.erros === 6 || props.chutecerto ? { display: props.displayletraforca } : { display: 'none' }} className={props.cor}
+                                    >{p}</h1>
+                                
 
-                            >{p}</h1>
-                            <h2 style={props.letraclicada.includes(p) || props.erros === 6 || props.chutecerto ? { display: 'none' } : { display: 'block' }}>{'__'}</h2>
-                        </div>
-                    </>)
-                }
-            </div>
-            <div className="divbotao"><Botão a={a} disabled={props.habilitariniciarjogo} className="botao1" data-test="choose-word" onClick={() => {
-                setA(true)
-                props.setHabilitado(false)
-                props.setLetraClicada('.')
-                props.setDisplayTracos('flex')
-                props.setLetraInicial('letrainicial letrainiciada')
-                if (props.erros === 6) {
-                    setA(false)
-                }
-            }
-            }
-            >{!a ? 'INICIAR JOGO' : 'REINICIAR JOGO'}</Botão>
-                <button
-                    onClick={() => window.location.reload(true)}
-                    className="botao2" style={{ display: props.buttonreiniciar }}>REINICIAR JOGO</button>
+                                <h2 style={props.letraclicada.includes(p) || props.erros === 6 || props.chutecerto ? { display: 'none' } : { display: 'block' }}>{'__'}</h2>
+                            </div>
+                        </>)
+                    }
+                </div>
+            </Animated>
+
+
+
+            <div className="divbotao">
+                <Animated animationIn="fadeInLeft" animationOut="fadeOut" animationInDuration={800} animationOutDuration={800} isVisible={!a}>
+                    <Botão a={a} disabled={props.habilitariniciarjogo} className="botao1" data-test="choose-word" onClick={() => {
+                        setA(true)
+                        props.setHabilitado(false)
+                        props.setLetraClicada('.')
+                        props.setDisplayTracos('flex')
+                        props.setLetraInicial('letrainicial letrainiciada')
+                        if (props.erros === 6) {
+                            setA(true)
+                        }
+                    }
+                    }
+                    >{!a ? 'INICIAR JOGO' : 'REINICIAR JOGO'}
+                    </Botão>
+                </Animated>
+
+
+                <Animated animationIn="fadeInLeft" animationOut="fadeOut" animationInDuration={800} animationOutDuration={800} isVisible={a}>
+                    <button
+                        onClick={() => window.location.reload(true)}
+                        className="botao2" style={{ display: props.buttonreiniciar }}>REINICIAR JOGO
+                    </button>
+                </Animated>
+
             </div>
         </div>
     )
